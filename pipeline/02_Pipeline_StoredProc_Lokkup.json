@@ -67,8 +67,8 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "pipelineReturnValue",
-					"setSystemVariable": true
+					"variableName": "GetTotalDue",
+					"value": "'"
 				}
 			}
 		],
