@@ -229,7 +229,7 @@
 						"typeProperties": {
 							"source": {
 								"type": "AzureSqlSource",
-								"sqlReaderStoredProcedureName": "[[dbo].[GetTotalDue]",
+								"sqlReaderStoredProcedureName": "[[dbo].[getLineTotal]",
 								"storedProcedureParameters": {
 									"pCustomerId": {
 										"type": "Int32",
