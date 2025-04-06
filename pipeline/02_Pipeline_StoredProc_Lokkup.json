@@ -13,6 +13,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
@@ -50,7 +51,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "TotalDue",
+					"variableName": "Due",
 					"value": {
 						"value": "@activity('LookupDue Value').output",
 						"type": "Expression"
@@ -85,6 +86,9 @@
 			},
 			"TotalDue": {
 				"type": "Integer"
+			},
+			"Due": {
+				"type": "String"
 			}
 		},
 		"annotations": []
