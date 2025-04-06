@@ -45,10 +45,6 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "@activity('Copydatacustomers').output",
-						"type": "Expression"
-					},
 					"activities": [
 						{
 							"name": "Copydatacustomers",
