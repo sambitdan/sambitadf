@@ -60,7 +60,14 @@
 			{
 				"name": "GetDefaultValue",
 				"type": "SetVariable",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "LookupDue Value",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
 				"policy": {
 					"secureOutput": false,
 					"secureInput": false
@@ -68,7 +75,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "GetTotalDue",
-					"value": "'"
+					"value": 0
 				}
 			}
 		],
