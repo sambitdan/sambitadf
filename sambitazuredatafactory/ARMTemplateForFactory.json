@@ -64,9 +64,7 @@
 								"type": "DatasetReference",
 								"parameters": {}
 							},
-							"fieldList": [
-								"childItems"
-							],
+							"fieldList": [],
 							"storeSettings": {
 								"type": "AzureBlobFSReadSettings",
 								"recursive": true,
@@ -289,6 +287,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"fileName": "*.csv",
 						"fileSystem": "source"
 					},
 					"columnDelimiter": ",",
