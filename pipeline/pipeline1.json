@@ -92,7 +92,13 @@
 							"inputs": [
 								{
 									"referenceName": "CustomerCsvCopy",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Filename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
