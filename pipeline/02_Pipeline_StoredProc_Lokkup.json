@@ -50,7 +50,7 @@
 					"secureInput": false
 				},
 				"typeProperties": {
-					"variableName": "TotalDueNew",
+					"variableName": "TotalDueStr",
 					"value": {
 						"value": "@activity('LookupDue Value').output",
 						"type": "Expression"
@@ -91,6 +91,9 @@
 			},
 			"TotalDueNew": {
 				"type": "Integer"
+			},
+			"TotalDueStr": {
+				"type": "String"
 			}
 		},
 		"annotations": []
