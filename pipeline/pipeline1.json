@@ -45,6 +45,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Get_Metadata').output.childItems",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Copydatacustomers",
