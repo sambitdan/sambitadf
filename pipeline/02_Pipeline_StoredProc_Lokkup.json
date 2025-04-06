@@ -74,8 +74,8 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "GetTotalDue",
-					"value": 0
+					"variableName": "TotalDueStr",
+					"value": "Null"
 				}
 			}
 		],
