@@ -49,7 +49,6 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
 				"typeProperties": {
 					"variableName": "TotalDueNew",
 					"value": {
