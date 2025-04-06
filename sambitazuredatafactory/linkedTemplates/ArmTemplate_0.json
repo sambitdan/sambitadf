@@ -237,7 +237,7 @@
 								"parameters": {}
 							},
 							"fieldList": [
-								"itemName"
+								"exists"
 							],
 							"storeSettings": {
 								"type": "AzureBlobFSReadSettings",
