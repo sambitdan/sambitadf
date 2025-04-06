@@ -58,16 +58,13 @@
 				}
 			},
 			{
-				"name": "GetDefaultValue",
-				"type": "AppendVariable",
-				"dependsOn": [
-					{
-						"activity": "LookupDue Value",
-						"dependencyConditions": [
-							"Failed"
-						]
-					}
-				],
+				"name": "Get",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": []
 			}
 		],
