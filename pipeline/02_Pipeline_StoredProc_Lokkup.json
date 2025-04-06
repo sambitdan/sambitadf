@@ -50,7 +50,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "GetTotalDue",
+					"variableName": "TotalDue",
 					"value": ""
 				}
 			},
