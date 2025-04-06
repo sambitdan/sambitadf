@@ -35,9 +35,20 @@
 			{
 				"name": "ForEachItem",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Get_Metadata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Get_Metadata').output.childItems",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Copydatacustomers",
