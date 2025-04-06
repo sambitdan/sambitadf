@@ -49,12 +49,10 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
 					"variableName": "TotalDueStr",
-					"value": {
-						"value": "@activity('LookupDue Value').output",
-						"type": "Expression"
-					}
+					"value": "[object Object]"
 				}
 			},
 			{
