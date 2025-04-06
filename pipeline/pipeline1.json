@@ -46,7 +46,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get_Metadata').output.childItems",
+						"value": "@activity('Copydatacustomers').output",
 						"type": "Expression"
 					},
 					"activities": [
