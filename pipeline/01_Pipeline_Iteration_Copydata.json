@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "01_Pipeline_Iteration_Copydata",
 	"properties": {
 		"activities": [
 			{
