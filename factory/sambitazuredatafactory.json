@@ -1,0 +1,9 @@
+{
+	"name": "sambitazuredatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8573408c-8bae-4ac3-879b-35e50394cd90",
+		"tenantId": "e0d958db-9607-4199-a235-2cc877d4cced"
+	}
+}
