@@ -263,7 +263,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@activity('Copydatacustomers').output",
+								"value": "@activity('Get_Metadata').output.childItems",
 								"type": "Expression"
 							},
 							"activities": [
@@ -294,10 +294,7 @@
 											"storeSettings": {
 												"type": "AzureBlobStorageReadSettings",
 												"recursive": true,
-												"wildcardFileName": {
-													"value": "@item().name",
-													"type": "Expression"
-												},
+												"wildcardFileName": "*",
 												"enablePartitionDiscovery": false
 											},
 											"formatSettings": {
