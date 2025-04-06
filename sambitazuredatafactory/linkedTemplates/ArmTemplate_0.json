@@ -520,7 +520,7 @@
 						"typeProperties": {
 							"variableName": "GetTotalDue",
 							"value": {
-								"value": "@activity('LookupDue Value').output.firstRow.TotalDue",
+								"value": "@activity('LookupDue Value').output",
 								"type": "Expression"
 							}
 						}
