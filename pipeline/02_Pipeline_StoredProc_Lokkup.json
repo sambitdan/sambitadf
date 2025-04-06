@@ -52,7 +52,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "TotalDueStr",
-					"value": "[object Object]"
+					"value": {
+						"value": "@activity('LookupDue Value').output",
+						"type": "Expression"
+					}
 				}
 			},
 			{
