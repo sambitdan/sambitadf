@@ -104,7 +104,13 @@
 				"inputs": [
 					{
 						"referenceName": "Customer_Data_Copy",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": {
+								"value": "@activity('Get_Metadata').output.itemName",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
