@@ -32,6 +32,27 @@
 						"type": "DatasetReference"
 					}
 				}
+			},
+			{
+				"name": "GetData",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "LookupDue Value",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "",
+					"value": ""
+				}
 			}
 		],
 		"annotations": []
