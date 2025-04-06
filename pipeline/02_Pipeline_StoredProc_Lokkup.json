@@ -50,11 +50,19 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "",
-					"value": ""
+					"variableName": "GetTotalDue",
+					"value": {
+						"value": "@activity('LookupDue Value').output.firstRow.TotalDue",
+						"type": "Expression"
+					}
 				}
 			}
 		],
+		"variables": {
+			"GetTotalDue": {
+				"type": "Integer"
+			}
+		},
 		"annotations": []
 	}
 }
