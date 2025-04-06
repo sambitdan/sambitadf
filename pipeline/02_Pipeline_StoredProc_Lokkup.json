@@ -30,7 +30,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlFactSalesTable",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
