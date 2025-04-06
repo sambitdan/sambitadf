@@ -50,15 +50,11 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "pipelineReturnValue",
-					"value": [
-						{
-							"value": {
-								"type": "Float"
-							}
-						}
-					],
-					"setSystemVariable": true
+					"variableName": "GetTotalDue",
+					"value": {
+						"value": "@activity('LookupDue Value').output",
+						"type": "Expression"
+					}
 				}
 			},
 			{
@@ -86,6 +82,9 @@
 		"variables": {
 			"GetTotalDue": {
 				"type": "Integer"
+			},
+			"TotalDue": {
+				"type": "String"
 			}
 		},
 		"annotations": []
