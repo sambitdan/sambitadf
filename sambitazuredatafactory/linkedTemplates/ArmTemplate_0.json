@@ -263,7 +263,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@activity('Get_Metadata').output.childItems",
+								"value": "@activity('Get_Metadata').output.childItems.name",
 								"type": "Expression"
 							},
 							"activities": [
