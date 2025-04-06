@@ -264,7 +264,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"variableName": "TotalDueNew",
+							"variableName": "TotalDueStr",
 							"value": {
 								"value": "@activity('LookupDue Value').output",
 								"type": "Expression"
@@ -288,8 +288,8 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"variableName": "GetTotalDue",
-							"value": 0
+							"variableName": "TotalDueStr",
+							"value": "Null"
 						}
 					}
 				],
@@ -308,6 +308,9 @@
 					},
 					"TotalDueNew": {
 						"type": "Integer"
+					},
+					"TotalDueStr": {
+						"type": "String"
 					}
 				},
 				"annotations": []
