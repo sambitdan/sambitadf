@@ -50,7 +50,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "GetTotalDue",
+					"variableName": "TotalDue",
 					"value": {
 						"value": "@activity('LookupDue Value').output",
 						"type": "Expression"
@@ -84,7 +84,7 @@
 				"type": "Integer"
 			},
 			"TotalDue": {
-				"type": "String"
+				"type": "Integer"
 			}
 		},
 		"annotations": []
