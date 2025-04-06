@@ -243,7 +243,8 @@
 								"referenceName": "AzureSqlFactSalesTable",
 								"type": "DatasetReference",
 								"parameters": {}
-							}
+							},
+							"firstRowOnly": false
 						}
 					},
 					{
