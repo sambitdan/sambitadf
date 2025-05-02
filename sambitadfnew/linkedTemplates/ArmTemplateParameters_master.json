@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "sambitadfnew"
+		},
+		"AzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://sambitazuredatalake.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase_properties_typeProperties_server": {
+			"value": "sambitdbserver.database.windows.net"
+		},
+		"AzureSqlDatabase_properties_typeProperties_database": {
+			"value": "sambitdb"
+		},
+		"AzureSqlDatabase_properties_typeProperties_userName": {
+			"value": "sambitdb"
+		},
+		"triggerStorageEvent_properties_typeProperties_scope": {
+			"value": "/subscriptions/ac410188-9a54-4890-9687-4e1a9e5b9bee/resourceGroups/sambit-resource-grp/providers/Microsoft.Storage/storageAccounts/sambitazuredatalake"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
