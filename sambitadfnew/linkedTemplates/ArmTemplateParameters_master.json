@@ -14,6 +14,12 @@
 		"AzureSqlDatabase_password": {
 			"value": ""
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"AzureDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://sambitazuredatalake.dfs.core.windows.net/"
 		},
@@ -28,6 +34,18 @@
 		},
 		"triggerStorageEvent_properties_typeProperties_scope": {
 			"value": "/subscriptions/ac410188-9a54-4890-9687-4e1a9e5b9bee/resourceGroups/sambit-resource-grp/providers/Microsoft.Storage/storageAccounts/sambitazuredatalake"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://sambitazuredatalake.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "sambitdbserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "sambitdb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "sambitdb"
 		},
 		"containerUri": {
 			"value": ""
