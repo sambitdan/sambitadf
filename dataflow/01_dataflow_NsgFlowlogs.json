@@ -1,0 +1,89 @@
+{
+	"name": "01_dataflow_NsgFlowlogs",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "NsgLogSampleJson",
+						"type": "DatasetReference"
+					},
+					"name": "SrcNsgLogFile"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlFlowTuplesTable",
+						"type": "DatasetReference"
+					},
+					"name": "SinkFlowTuples"
+				}
+			],
+			"transformations": [
+				{
+					"name": "NsgLogFlatten"
+				},
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "SelectColumns"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          records as (category as string, macAddress as string, operationName as string, properties as (Version as short, flows as (flows as (flowTuples as string[], mac as string)[], rule as string)[]), resourceId as string, systemId as string, time as string)[]",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine',",
+				"     wildcardPaths:['*.json']) ~> SrcNsgLogFile",
+				"SrcNsgLogFile foldDown(unrollMultiple(records,records.properties.flows.flows.flowTuples),",
+				"     mapColumn(",
+				"          RecordedTime = records.time,",
+				"          RuleName = records.properties.flows.rule,",
+				"          flowTuples = records.properties.flows.flows.flowTuples",
+				"     ),",
+				"     skipDuplicateMapInputs: false,",
+				"     skipDuplicateMapOutputs: false) ~> NsgLogFlatten",
+				"NsgLogFlatten derive(RecordedTime = RecordedTime,",
+				"          RuleName = RuleName,",
+				"          SourceIPAddress = split(flowTuples,',')[2],",
+				"          DestinationIPAddress = split(flowTuples,',')[3],",
+				"          SourcePort = split(flowTuples,',')[4],",
+				"          Decision = split(flowTuples,',')[8]) ~> derivedColumn1",
+				"derivedColumn1 select(mapColumn(",
+				"          RecordedTime,",
+				"          RuleName,",
+				"          SourceIPAddress,",
+				"          DestinationIPAddress,",
+				"          SourcePort,",
+				"          Decision",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SelectColumns",
+				"SelectColumns sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Recordedtime as string,",
+				"          Rulename as string,",
+				"          SourceIPAddress as string,",
+				"          DestinationIPAddress as string,",
+				"          SourcePort as string,",
+				"          Decision as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> SinkFlowTuples"
+			]
+		}
+	}
+}

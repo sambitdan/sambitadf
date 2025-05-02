@@ -1,0 +1,42 @@
+{
+	"name": "AzureSqlFlowTuplesTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Recordedtime",
+				"type": "datetimeoffset",
+				"scale": 7
+			},
+			{
+				"name": "Rulename",
+				"type": "varchar"
+			},
+			{
+				"name": "SourceIPAddress",
+				"type": "varchar"
+			},
+			{
+				"name": "DestinationIPAddress",
+				"type": "varchar"
+			},
+			{
+				"name": "SourcePort",
+				"type": "varchar"
+			},
+			{
+				"name": "Decision",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "FlowTuples"
+		}
+	}
+}
